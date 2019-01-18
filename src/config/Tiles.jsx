@@ -5,6 +5,7 @@ import EditDescriptionTile from '@plone/volto/components/manage/Tiles/Descriptio
 import EditTextTile from '@plone/volto/components/manage/Tiles/Text/Edit';
 import EditImageTile from '@plone/volto/components/manage/Tiles/Image/Edit';
 import EditVideoTile from '@plone/volto/components/manage/Tiles/Video/Edit';
+import EditRssTile from '@plone/volto/components/manage/Tiles/Rss/Edit';
 
 const customTiles = [];
 
@@ -29,6 +30,10 @@ const messagesTiles = defineMessages({
     id: 'video',
     defaultMessage: 'Video',
   },
+  rss: {
+    id: 'rss',
+    defaultMessage: 'Rss',
+  },
 });
 
 const getDefaultEditTileView = type => {
@@ -43,6 +48,8 @@ const getDefaultEditTileView = type => {
       return EditImageTile;
     case 'video':
       return EditVideoTile;
+    case 'rss':
+      return EditRssTile;
     default:
       break;
   }
